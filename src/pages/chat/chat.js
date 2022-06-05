@@ -16,7 +16,7 @@ const Chat = () => {
     useEffect(() => {
         const getConversations = async () => {
             try {
-                const res = await axios.get(`${process.env.REACT_APP_API_URL}/${user._id}`);
+                const res = await axios.get(`${process.env.REACT_APP_API_URL}/getConv/${user._id}`);
                 setConversations(res.data);
             } catch (err) {
                 console.log(err);
