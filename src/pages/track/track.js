@@ -46,7 +46,7 @@ function Track() {
 
 
   useEffect(() => {
-    socket.current = io(`ws:${REACT_APP_TRACK_API}`, { transports: ['websocket'], upgrade: true });
+    socket.current = io(`ws:${process.env.REACT_APP_TRACK_API}`, { transports: ['websocket'], upgrade: true });
     settrackConnected(true)
     socket.current.on("getMessage", (data) => {
       setariv({ lat: data.lat, lon: data.lon })
