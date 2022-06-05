@@ -44,7 +44,7 @@ const Home = () => {
 
 
   useEffect(() => {
-    socket.current = io(`${process.env.REACT_APP_TRACK_API}`, { transports: ['websocket'], upgrade: true });
+    socket.current = io(`${process.env.REACT_APP_TRACK_API}`, { transports: ['websocket'], upgrade: false });
     settrackConnected(true)
     socket.current.on("getMessage", (data) => {
     });
