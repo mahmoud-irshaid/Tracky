@@ -1,0 +1,286 @@
+body {
+    background-color: whitesmoke;
+}
+
+.chats {
+    width: 63vmin;
+    min-height: 80vh;
+    margin: 0 auto;
+    margin-top: 3%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+    gap: 2vw;
+    border-radius: .5rem;
+    background: white;
+    box-shadow:
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    ;
+
+
+    text-align: start;
+
+    h2 {
+        width: 100%;
+        margin: 1rem;
+        padding-left: 1%;
+        text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.07);
+    }
+}
+
+
+
+
+
+.conversation {
+    width: 100%;
+    min-height: 4em;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 1em;
+
+
+    &:hover,
+    &:active {
+        background: rgba(211, 211, 211, 0.548);
+    }
+
+
+    img {
+        width: 4em;
+        height: 4em;
+        min-width: 1.8em;
+        min-height: 1.8em;
+        margin-right: 2%;
+        border-radius: 5em;
+        object-fit: cover;
+    }
+}
+
+
+
+
+
+.messenger {
+    width: 50%;
+    height: calc(102vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3% auto;
+    font-family: var(--ntr);
+    gap: 1vmin;
+    overflow: hidden;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 12px lightgray;
+}
+
+.chatBoxTop {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-top: 5em;
+
+    section {
+        width: 105%;
+        min-height: 4em;
+        background: #1877f2;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        padding: 1vw 2vw;
+
+        img {
+            width: 2.5em;
+            height: 2.25em;
+            border-radius: 5em;
+            margin-right: 1.5%;
+            object-fit: cover;
+        }
+
+        span {
+            color: whitesmoke;
+        }
+    }
+
+    .messages {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            display: none
+        }
+
+        ;
+    }
+
+}
+
+.chatBoxBottom {
+    width: 100%;
+    height: clamp(3.5em, 5vw, 4em);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-top: .15em gray solid;
+}
+
+.chatMessageInput {
+    width: 90%;
+    height: auto;
+    resize: none;
+    padding: clamp(1em, 3vw, 15px);
+    padding-top: 0;
+    outline: none;
+    font-size: 16px;
+    overflow: hidden;
+    border: none;
+    transition: .1s all;
+    margin-top: 1.5em;
+
+    &:active {
+        filter: brightness(.9);
+    }
+}
+
+.chatSubmitButton {
+    width: 10%;
+    min-width: 3em;
+    height: 100%;
+    border: none;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    cursor: pointer;
+    background-color: var(--cyan);
+
+    &:active {
+        filter: brightness(.9);
+
+        img {
+            transform: scale(.8) rotateZ(45deg);
+            ;
+        }
+    }
+
+    img {
+        width: 3vmin;
+        min-width: 1.5em;
+        margin: 0 20%;
+        transform: rotateZ(45deg);
+        transition: all .3s ease;
+    }
+}
+
+
+
+.message,
+.messageOwn {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.messageTop {
+    display: flex;
+    align-items: center;
+}
+
+.messageImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.messageText {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #1877f2;
+    color: white;
+    max-width: 20em;
+    word-wrap: break-word;
+}
+
+.messageBottom {
+    font-size: clamp(10px, 2vw, 12px);
+    margin-top: 10px;
+    color: var(--black)
+}
+
+.messageOwn {
+    align-items: flex-end;
+
+    .messageTop {
+        flex-direction: row-reverse;
+
+        .messageImg {
+            margin: 0 0 0 10px;
+        }
+    }
+}
+
+.messageOwn .messageText {
+    background-color: rgb(245, 241, 241);
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .chats {
+        width: 100%;
+        box-shadow: unset;
+    }
+
+
+    .messenger {
+        width: 100%;
+        gap: 0;
+        box-shadow: 0 13px 10px lightgray;
+        margin-bottom: 0;
+
+        .chatBox {
+            .messageImg {
+                width: 25px;
+                height: 25px;
+
+            }
+
+
+            .messageText {
+                font-size: clamp(10px, 3vw, 16px);
+                max-width: 10em;
+            }
+
+        }
+    }
+}

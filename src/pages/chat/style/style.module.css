@@ -1,0 +1,297 @@
+body {
+  background-color: whitesmoke;
+}
+
+.chats {
+  width: 63vmin;
+  min-height: 80vh;
+  margin: 0 auto;
+  margin-top: 3%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1%;
+  gap: 2vw;
+  border-radius: .5rem;
+  background: white;
+  -webkit-box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042);
+          box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042);
+  text-align: start;
+}
+
+.chats h2 {
+  width: 100%;
+  margin: 1rem;
+  padding-left: 1%;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.07);
+}
+
+.conversation {
+  width: 100%;
+  min-height: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 1em;
+}
+
+.conversation:hover, .conversation:active {
+  background: rgba(211, 211, 211, 0.548);
+}
+
+.conversation img {
+  width: 4em;
+  height: 4em;
+  min-width: 1.8em;
+  min-height: 1.8em;
+  margin-right: 2%;
+  border-radius: 5em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.messenger {
+  width: 50%;
+  height: calc(102vh - 70px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3% auto;
+  font-family: var(--ntr);
+  gap: 1vmin;
+  overflow: hidden;
+  background: white;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 12px lightgray;
+          box-shadow: 0 0 12px lightgray;
+}
+
+.chatBoxTop {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-top: 5em;
+}
+
+.chatBoxTop section {
+  width: 105%;
+  min-height: 4em;
+  background: #1877f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  padding: 1vw 2vw;
+}
+
+.chatBoxTop section img {
+  width: 2.5em;
+  height: 2.25em;
+  border-radius: 5em;
+  margin-right: 1.5%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.chatBoxTop section span {
+  color: whitesmoke;
+}
+
+.chatBoxTop .messages {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.chatBoxTop .messages::-webkit-scrollbar {
+  display: none;
+}
+
+.chatBoxBottom {
+  width: 100%;
+  height: clamp(3.5em, 5vw, 4em);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-top: .15em gray solid;
+}
+
+.chatMessageInput {
+  width: 90%;
+  height: auto;
+  resize: none;
+  padding: clamp(1em, 3vw, 15px);
+  padding-top: 0;
+  outline: none;
+  font-size: 16px;
+  overflow: hidden;
+  border: none;
+  -webkit-transition: .1s all;
+  transition: .1s all;
+  margin-top: 1.5em;
+}
+
+.chatMessageInput:active {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.chatSubmitButton {
+  width: 10%;
+  min-width: 3em;
+  height: 100%;
+  border: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  cursor: pointer;
+  background-color: var(--cyan);
+}
+
+.chatSubmitButton:active {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.chatSubmitButton:active img {
+  -webkit-transform: scale(0.8) rotateZ(45deg);
+          transform: scale(0.8) rotateZ(45deg);
+}
+
+.chatSubmitButton img {
+  width: 3vmin;
+  min-width: 1.5em;
+  margin: 0 20%;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.message,
+.messageOwn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px 0;
+}
+
+.messageTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.messageImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 10px;
+}
+
+.messageText {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #1877f2;
+  color: white;
+  max-width: 20em;
+  word-wrap: break-word;
+}
+
+.messageBottom {
+  font-size: clamp(10px, 2vw, 12px);
+  margin-top: 10px;
+  color: var(--black);
+}
+
+.messageOwn {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.messageOwn .messageTop {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.messageOwn .messageTop .messageImg {
+  margin: 0 0 0 10px;
+}
+
+.messageOwn .messageText {
+  background-color: #f5f1f1;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .chats {
+    width: 100%;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+  }
+  .messenger {
+    width: 100%;
+    gap: 0;
+    -webkit-box-shadow: 0 13px 10px lightgray;
+            box-shadow: 0 13px 10px lightgray;
+    margin-bottom: 0;
+  }
+  .messenger .chatBox .messageImg {
+    width: 25px;
+    height: 25px;
+  }
+  .messenger .chatBox .messageText {
+    font-size: clamp(10px, 3vw, 16px);
+    max-width: 10em;
+  }
+}
+/*# sourceMappingURL=style.module.css.map */

@@ -1,0 +1,193 @@
+.friends {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    background-color: whitesmoke;
+    margin: 0;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    padding: 5%;
+
+    a {
+        display: inline;
+        text-decoration: none;
+        color: black;
+        border-radius: 1em;
+        transition: all ease .2s;
+
+        &:hover {
+            transform: scale(.95);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.028);
+        }
+    }
+
+    .friend {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        img {
+            width: 100%;
+            min-height: 12em;
+        }
+
+        div {
+            width: 100%;
+            background: white;
+            text-align: center;
+            border-radius: 1em;
+            padding: 1%;
+        }
+    }
+}
+
+.setImg {
+    width: 100%;
+    height: 100%;
+    display: inherit;
+    flex-direction: column;
+    margin-bottom: 2%;
+
+    img {
+        width: clamp(10em, 40vw, 15em);
+        height: clamp(10em, 40vw, 15em);
+        object-fit: contain;
+        border-radius: 10em;
+        margin: 0 auto;
+        border: .3em solid gray;
+        background: rgb(228, 228, 228);
+    }
+
+    input[type=file] {
+        margin: 5% auto;
+        padding: 0;
+
+        &::file-selector-button {
+            border: 0;
+            padding: 3% 5%;
+            margin-left: 10%;
+        }
+    }
+}
+
+
+.container {
+    width: 90vmin;
+    min-height: 80vh;
+    margin: 3% auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    gap: 2vw;
+    border-radius: .5rem;
+    background: white;
+    box-shadow:
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    ;
+
+    padding-top: 5%;
+
+    div {
+        width: 100%;
+        display: inherit;
+        flex-direction: column;
+        gap: 1vw;
+        text-align: center;
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+
+
+    section {
+        width: 100%;
+
+        div {
+            button {
+                min-width: 6em;
+                background: unset;
+                margin: 0 auto;
+                border-radius: .3em;
+                padding: 1% 3%;
+                font-size: 16px;
+                border: .2em gray solid;
+                cursor: pointer;
+                margin-bottom: 5%;
+
+                &:hover {
+                    background-color: #b3d1f8;
+                    border-color: #176cdb;
+                }
+            }
+
+            .unfriend {
+                position: relative;
+                overflow: hidden;
+
+                &:hover {
+                    background-color: lightpink;
+                    border-color: lightcoral;
+                    padding: 1% 0;
+
+                    &::before {
+                        content: 'unfriend';
+                        width: 100%;
+                        position: absolute;
+                        margin-left: -25%;
+                        background-color: lightpink;
+                        border-color: lightcoral;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .unsent {
+                &:hover {
+                    &::before {
+                        content: 'delete';
+                        margin-left: 0%;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+
+    .container {
+        width: 100%;
+        box-shadow: unset;
+    }
+
+    .friends {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+}

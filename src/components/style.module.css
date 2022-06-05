@@ -1,0 +1,501 @@
+header {
+  width: auto;
+  height: 8vmin;
+  min-height: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: white;
+  -webkit-box-shadow: 0 3px 10px lightgray;
+          box-shadow: 0 3px 10px lightgray;
+  padding: 1% 8%;
+  z-index: 5;
+}
+
+a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5%;
+  text-decoration: none;
+  color: black;
+}
+
+a img {
+  margin: 0 auto;
+  width: 15%;
+  min-width: 1.5em;
+}
+
+a .menuText {
+  display: none;
+}
+
+.logo {
+  -webkit-box-flex: .1;
+      -ms-flex: .1;
+          flex: .1;
+  z-index: 10;
+}
+
+.logo a img {
+  margin: 0 0;
+  width: 20%;
+  min-width: 2.3em;
+}
+
+.search {
+  -webkit-box-flex: .8;
+      -ms-flex: .8;
+          flex: .8;
+}
+
+.search main {
+  width: 90%;
+  height: 2.5em;
+  padding-left: .4em;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+  margin-left: 1vmax;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2.5%;
+  position: relative;
+  min-height: unset;
+}
+
+.search main:focus {
+  outline-color: black;
+}
+
+.search main input {
+  width: 92%;
+  height: 90%;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  border: 0;
+  outline: none;
+}
+
+.search .searchRes {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  background: white;
+  -webkit-box-shadow: 0 5px 10px rgba(158, 158, 158, 0.781);
+          box-shadow: 0 5px 10px rgba(158, 158, 158, 0.781);
+  top: 100%;
+  left: 0;
+  margin-top: .5%;
+  z-index: 6;
+}
+
+.search .searchRes div {
+  width: 100%;
+  height: 100%;
+  min-height: 2.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search .searchRes div:hover, .search .searchRes div:active {
+  background: rgba(211, 211, 211, 0.548);
+}
+
+.search .searchRes div a {
+  width: 100%;
+  height: 100%;
+  background: unset;
+  color: gray;
+  text-decoration: none;
+  padding-left: 2%;
+}
+
+section {
+  -webkit-box-flex: .2;
+      -ms-flex: .2;
+          flex: .2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.notify {
+  position: relative;
+}
+
+.notify::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: red;
+  position: absolute;
+  border-radius: 5em;
+  right: -10px;
+  bottom: 0;
+  border: 3px white solid;
+}
+
+.req {
+  -webkit-box-flex: .1;
+      -ms-flex: .1;
+          flex: .1;
+  cursor: pointer;
+  position: relative;
+}
+
+.req img {
+  min-width: 1.8em;
+  min-height: 1.8em;
+}
+
+.req:nth-child(2) {
+  margin-left: -6em;
+}
+
+.req .showReq {
+  width: 15%;
+  min-width: 20em;
+  position: fixed;
+  margin-left: -10em;
+  margin-top: .3em;
+  background: white;
+  -webkit-box-shadow: 0 5px 10px rgba(158, 158, 158, 0.781);
+          box-shadow: 0 5px 10px rgba(158, 158, 158, 0.781);
+  z-index: 6;
+}
+
+.req .showReq div {
+  width: auto;
+  height: 7.5vmin;
+  min-height: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 3%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.req .showReq div a {
+  width: 100%;
+  height: 100%;
+  background: unset;
+  color: gray;
+  text-decoration: none;
+  padding-left: 2%;
+  padding-top: .2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5em;
+  z-index: 1;
+}
+
+.req .showReq div a img {
+  width: 5%;
+  min-width: 1.5em;
+  margin: 0 0;
+}
+
+.req .showReq div a span {
+  word-wrap: break-word;
+}
+
+.req .showReq div:hover, .req .showReq div:active {
+  background: rgba(211, 211, 211, 0.548);
+}
+
+.req .showReq div button {
+  height: 2em;
+  background-color: #0092e0;
+  cursor: pointer;
+  border: 0;
+  color: white;
+  border-radius: .3em;
+  padding: 0 .7em;
+  z-index: 2;
+}
+
+.req .showReq div button:active {
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
+  background-color: #0076b6;
+}
+
+.req .showReq div :nth-child(3) {
+  background: rgba(211, 211, 211, 0.548);
+  color: black;
+  margin-left: 1em;
+}
+
+.links {
+  -webkit-box-flex: .1;
+      -ms-flex: .1;
+          flex: .1;
+}
+
+.links a img {
+  min-width: 1.5em;
+}
+
+.ham {
+  display: none;
+}
+
+footer {
+  width: auto;
+  min-height: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #2d3e50;
+  margin-top: 8%;
+  padding: 1.5em 3%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 4em;
+  z-index: 1;
+  overflow: hidden;
+}
+
+footer .logo img {
+  -webkit-backdrop-filter: brightness(2);
+          backdrop-filter: brightness(2);
+  border-radius: 5em;
+}
+
+footer nav {
+  -webkit-box-flex: .4;
+      -ms-flex: .4;
+          flex: .4;
+}
+
+footer nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+@media screen and (max-width: 475px) {
+  footer nav ul {
+    padding: 1.5em 0;
+  }
+}
+
+footer a:hover {
+  color: whitesmoke;
+}
+
+footer .copy {
+  -webkit-box-flex: .2;
+      -ms-flex: .2;
+          flex: .2;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1% 5%;
+  }
+  header section {
+    display: none;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    inset: 0;
+    z-index: 13;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1%;
+    padding-top: 3.3em;
+  }
+  header section::after {
+    content: '';
+    width: 100%;
+    height: .5%;
+    background-color: black;
+  }
+  header section div {
+    width: 90%;
+    border-radius: .8em;
+    max-height: 5em;
+  }
+  header section div:active {
+    background: #0092e09a;
+  }
+  header section div div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  header section div div::after {
+    right: 0 !important;
+  }
+  header section div a {
+    height: 100%;
+    padding: 0 2%;
+  }
+  header section div a img {
+    width: 5%;
+    margin: 0;
+  }
+  header section div a .menuText {
+    display: block;
+  }
+  header section .req {
+    -webkit-box-flex: .1;
+        -ms-flex: .1;
+            flex: .1;
+  }
+  header section .req .showReq {
+    width: 100%;
+    min-width: 18em;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+    margin: 0 auto;
+    position: relative;
+    background: white;
+    border: solid 2px;
+  }
+  header section .req .showReq div {
+    min-height: 4em;
+  }
+  header .prof {
+    margin-bottom: 150px;
+  }
+  header .ham {
+    display: block;
+    z-index: 15;
+  }
+  header .ham a {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header .ham a img {
+    margin: 0;
+  }
+}
+
+.progress8 {
+  width: 60px;
+  height: 60px;
+  border: 15px solid #ddd;
+  border-radius: 50%;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  margin: auto;
+  inset: 0;
+}
+
+.progress8:before {
+  content: "";
+  position: absolute;
+  inset: -15px;
+  border-radius: 50%;
+  border: 15px solid #0076b6;
+  -webkit-animation: p8 2s infinite linear;
+          animation: p8 2s infinite linear;
+}
+
+@-webkit-keyframes p8 {
+  0% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+            clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+@keyframes p8 {
+  0% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+            clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+/*# sourceMappingURL=style.module.css.map */

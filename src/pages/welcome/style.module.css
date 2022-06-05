@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap");
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+}
+
+section .links {
+  display: inherit;
+}
+
+section .links a {
+  margin: 0 1.5vmin;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 500px) {
+  section .links a:nth-child(1) {
+    display: none;
+  }
+}
+
+section .links a:nth-child(2) {
+  border: .2em solid #0092e0;
+  border-radius: 5em;
+  padding: .2em 1em;
+}
+
+section .links a:nth-child(2):hover {
+  background-color: #0092e0;
+  color: white;
+}
+
+.logo {
+  margin: 0;
+  width: 3%;
+  min-width: 2.3em;
+}
+
+.logo2 {
+  margin: 0;
+  width: 5%;
+  min-width: 5em;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0092e0), color-stop(10%), color-stop(40%, white));
+  background: linear-gradient(to bottom, #0092e0, 10%, white 40%);
+}
+
+main .article1 {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10%;
+  margin: 6em auto;
+}
+
+main .article1 img {
+  width: 45%;
+  border-radius: 1em;
+  -webkit-box-shadow: 10px 10px 10px #e6e6e6, 15px 15px 25px #f3f3f3;
+          box-shadow: 10px 10px 10px #e6e6e6, 15px 15px 25px #f3f3f3;
+  -webkit-transform: perspective(400px) rotateY(-10deg) rotateX(5deg);
+          transform: perspective(400px) rotateY(-10deg) rotateX(5deg);
+}
+
+main .article1 article h1 {
+  font-size: xx-large;
+  white-space: nowrap;
+  margin-bottom: 10%;
+}
+
+main .article1 article h1 b {
+  font-family: 'Londrina Shadow', 'PT Sans', sans-serif;
+}
+
+main .article1 article a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: .2em solid #0092e0;
+  border-radius: 5em;
+  padding: .2em 1em;
+  margin-top: 8%;
+}
+
+main .article1 article a:hover {
+  background-color: #0092e0;
+  color: white;
+}
+
+main h3 {
+  margin: 15% auto;
+}
+
+main .article2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 5em;
+  margin: 0 15%;
+}
+
+main .article2 div div {
+  margin-bottom: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .article2 div div img {
+  float: left;
+  width: 2.2em;
+  background: #0092e0;
+  padding: 4%;
+  border-radius: 1em;
+  margin: 0 5%;
+  -webkit-box-shadow: 0 0 10px #0092e0;
+          box-shadow: 0 0 10px #0092e0;
+}
+
+main .article2 div div h4 {
+  display: inline;
+  white-space: nowrap;
+}
+
+main .article2 div p {
+  margin-left: 1.2em;
+}
+
+main .article3 {
+  width: 60%;
+  margin-top: 10%;
+}
+
+main .article3 section img {
+  width: 49.8%;
+  border-radius: .5em;
+}
+
+main .article3 section h3 {
+  margin: 0 5%;
+}
+
+main .article4 {
+  width: 90%;
+  height: 28vw;
+  margin: 0 auto;
+  margin-top: 10%;
+  position: relative;
+  background-image: url(../../assets/shape.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: .5em;
+}
+
+main .article4 h2,
+main .article4 p {
+  text-align: center;
+  margin-top: 8vmin;
+  color: white;
+  font-size: 3vw;
+}
+
+main .article4 p {
+  margin-top: 0;
+  font-size: 2vw;
+}
+
+main .article4 a {
+  width: 10%;
+  height: 5%;
+  margin: 0 auto;
+  background: white;
+  padding: 1%;
+  border-radius: .3em;
+}
+
+main .article4 a:hover {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+main .article4 a:hover p {
+  color: #000;
+}
+
+main .article4 a p {
+  margin: 0;
+  color: #0092e0;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  main .article1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3em;
+  }
+  main .article1 img {
+    width: 75%;
+    min-width: 15em;
+  }
+  main .article1 article {
+    text-align: center;
+  }
+  main .article1 article a {
+    margin: 5% auto;
+  }
+  main .article2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+  }
+  main .article2 div {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  main .article2 div div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 3%;
+  }
+  main .article2 div div img {
+    padding: 1em;
+  }
+  main .article2 div p {
+    width: 70%;
+    margin: 0 auto;
+  }
+  main .article3 {
+    width: 90%;
+    margin-top: 10%;
+  }
+}
+/*# sourceMappingURL=style.module.css.map */

@@ -1,24 +1,73 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { AuthProvider } from './AuthContext';
+import { VerifyAuth } from './VerifyAuth';
+import Style from '../src/components/style.module.css'
+const Welcome = lazy(() => import('./pages/welcome/welcome'))
+const Home = lazy(() => import('./pages/home/home'))
+const LogIn = lazy(() => import('./pages/login/login'))
+const SignIn = lazy(() => import('./pages/login/signin'))
+const Track = lazy(() => import('./pages/track/track'))
+const Profile = lazy(() => import('./pages/profile/profile'))
+const Chat = lazy(() => import('./pages/chat/chat'))
+const Update = lazy(() => import('./pages/profile/updateProfile'))
+const ChatPage = lazy(() => import('./pages/chat/chatPage'))
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Suspense fallback={
+          <div className={Style.progress8}></div>
+        }>
+          <Switch>
+            <Route exact path='/signin' component={SignIn} />
+            <Route exact path='/login' component={LogIn} />
+            <Route exact path='/welcome' component={Welcome} />
+
+
+            <Route exact path='/' >
+              <VerifyAuth>
+                <Home />
+              </VerifyAuth>
+            </Route>
+
+            <Route exact path='/users/:id' >
+              <VerifyAuth>
+                <Profile />
+              </VerifyAuth>
+            </Route>
+
+            <Route exact path='/track/:id' >
+              <VerifyAuth>
+                <Track />
+              </VerifyAuth>
+            </Route>
+
+
+            <Route exact path='/messages' >
+              <VerifyAuth>
+                <Chat />
+              </VerifyAuth>
+            </Route>
+
+
+            <Route exact path='/messages/:id' >
+              <VerifyAuth>
+                <ChatPage />
+              </VerifyAuth>
+            </Route>
+
+            <Route exact path='/profile' >
+              <VerifyAuth>
+                <Update />
+              </VerifyAuth>
+            </Route>
+          </Switch>
+        </Suspense>
+      </Router>
+    </AuthProvider>
   );
 }
 
