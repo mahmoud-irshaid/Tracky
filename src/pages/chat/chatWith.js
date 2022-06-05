@@ -37,7 +37,7 @@ const ChatWith = React.memo(({ friendo, convId }) => {
 
 
     useEffect(() => {
-        socket.current = io(`ws:${process.env.REACT_APP_CHAT_API}`, { transports: ['websocket'], upgrade: true });
+        socket.current = io(`${process.env.REACT_APP_CHAT_API}`, { transports: ['websocket'], upgrade: true });
         setchatConnected(true)
         socket.current.on("getMessage", (data) => {
             setarrivalMessage({
