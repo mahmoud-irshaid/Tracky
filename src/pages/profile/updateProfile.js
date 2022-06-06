@@ -140,7 +140,7 @@ const Update = () => {
                         </Link>
                     ))
                         :
-                        <center style={{ gridColumn: '2/3' }}>No Friends found</center>
+                        <center>No Friends found</center>
                     }
 
                 </section>
