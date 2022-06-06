@@ -39,7 +39,7 @@ function MAP(props) {
               <Marker
                 position={{ lat: latUser, lng: lngUser }}
                 icon={{
-                  url: user && user.profileImg + '#custom_marker',
+                  url: user && user.profileImg + '#custom_marker'|| profile,
                   anchor: new google.maps.Point(32, 32),
                   scaledSize: new google.maps.Size(64, 64)
                 }}
