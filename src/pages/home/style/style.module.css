@@ -135,7 +135,6 @@
 @media (max-width: 768px) {
   .chatSwipper {
     width: 100%;
-    margin-top: -1em;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
     position: absolute;
@@ -143,7 +142,7 @@
             box-shadow: 0 13px 10px lightgray;
   }
   .chatSwipper:focus-within, .chatSwipper:hover {
-    margin-top: -40em;
+    margin-top: -30em;
     -webkit-backdrop-filter: brightness(0.9) blur(2px);
             backdrop-filter: brightness(0.9) blur(2px);
     border-radius: 1em;
